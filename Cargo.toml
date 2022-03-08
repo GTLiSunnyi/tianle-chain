@@ -1,0 +1,21 @@
+[package]
+name = "tianle"
+authors = ["tianle <1572839321@qq.com>"]
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde_yaml = "0.8.23"
+serde = {version = "1.0.136", features = ["derive"] }
+clap = { version = "3.1.3", features = ["derive"] }
+tonic = "0.6.2"
+prost = "0.9.0"
+tokio = { version = "1.17.0", features = ["full"] }
+log = "0.4.0"
+env_logger = "0.8.4"
+futures = "0.3"
+
+[build_dependencies]
+tonic-build = "0.6.2"

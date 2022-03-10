@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "../proto";
+
+message ChainConfig {
+    string chain_id = 1;
+}
+
+message PingRequest {}
+
+message PingResponse {
+    ChainConfig config = 1;
+}
+
+service NetworkService {
+    rpc Ping(PingRequest) returns (PingResponse);
+}
